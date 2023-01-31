@@ -189,7 +189,7 @@ public class ProxyStartup {
             PROXY_START_AND_SHUTDOWN.appendStartAndShutdown(brokerControllerWrapper);
             messagingProcessor = DefaultMessagingProcessor.createForLocalMode(brokerController);
         } else {
-            throw new IllegalArgumentException("try to start grpc server with wrong mode, use 'local' or 'cluster'");
+            throw new IllegalArgumentException("try to start GRPC server with wrong mode, use 'local' or 'cluster'");
         }
         PROXY_START_AND_SHUTDOWN.appendStartAndShutdown(messagingProcessor);
         return messagingProcessor;
